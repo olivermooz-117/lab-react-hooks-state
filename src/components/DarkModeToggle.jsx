@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react'
 
 const DarkModeToggle = ({ darkMode, setDarkMode }) => {
-  return (
-    <button 
-      data-testid="dark-mode-toggle"
-      onClick={() => setDarkMode(!darkMode)}
-    >
-      {darkMode ? 'Toggle Light Mode' : 'Toggle Dark Mode'}
-    </button>
-  );
-};
+  // TODO: Implement dark mode toggle logic
 
-export default DarkModeToggle;
+
+  const toggleDarkMode = () => {
+    setDarkMode( prev => !prev)
+  }
+
+  return (
+    <button onClick={toggleDarkMode}>
+      {darkMode ? ' Toggle Light Mode' : ' Toggle Dark Mode'}    
+    </button>
+  )
+}
+
+export default DarkModeToggle
